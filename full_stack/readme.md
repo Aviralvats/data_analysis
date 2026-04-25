@@ -1,0 +1,1 @@
+just learning django and used chaiaurcode django tutorial to create this app 

@@ -25,20 +25,20 @@ db = mongo_client["gemini_llm"]
 collection = db["talking with the model"]
 print("connected")
 
-def get_weather(city):
-    weather_api_key="7b208aba10193b9f6434d7806dd95112"
-    calling_url = f"http://api.openweathermap.org/data/2.5/weather?q={city}&units=metric&appid={weather_api_key}"
-    response=requests.get(calling_url).json()
-    if "main" in response:  
-        temp = response ["main"]["temp"]
-        desc = response ["weather"][0]["description"]
-        return f"the current temperature in {city} is {temp} degree celcius and the weather is {desc}"
-    else:
-        return " na mila vaha ka mausam"
+# def get_weather(city):
+#     weather_api_key="7b208aba10193b9f6434d7806dd95112"
+#     calling_url = f"http://api.openweathermap.org/data/2.5/weather?q={city}&units=metric&appid={weather_api_key}"
+#     response=requests.get(calling_url).json()
+#     if "main" in response:  
+#         temp = response ["main"]["temp"]
+#         desc = response ["weather"][0]["description"]
+#         return f"the current temperature in {city} is {temp} degree celcius and the weather is {desc}"
+#     else:
+#         return " na mila vaha ka mausam"
     
-def is_weather_query(user_input):
-    weather_keywords = ["weather", "temperature", "climate"]
-    return any(keyword in user_input.lower() for keyword in weather_keywords)
+# def is_weather_query(user_input):
+#     weather_keywords = ["weather", "temperature", "climate"]
+#     return any(keyword in user_input.lower() for keyword in weather_keywords)
 
 
 
@@ -83,19 +83,10 @@ while(True):
     except sr.RequestError:
         print("error agyii")
 
-    #user_input=text
-    if is_weather_query(user_input):
-        city=user_input.split()[-1]
-        weather_info = get_weather(city)
+ 
 
-        prompt=f"{weather_info} - answer naturally in one or two lines"
+       
 
-        
-        response=ollama.chat(
-        model="llama3",
-        messages=[{"role":"user","content":prompt}],
-        )
-    else:
         
         response=ollama.chat(
         model="llama3",
