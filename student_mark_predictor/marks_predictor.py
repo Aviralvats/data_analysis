@@ -1,0 +1,1 @@
+from model_linear_predictor import marks_predict

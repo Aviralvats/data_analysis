@@ -1,0 +1,19 @@
+price,description,date,shop
+700,clothing,01-01-2026,raymond
+600,food,01-02-2026,swiggy food
+500,transportation,01-03-2026,uber ride
+400,entertainment,01-04-2026,pvr
+400,entertainment,01-05-2026,bookmyshow
+100,entertainment,,netflix
+11,transportation,01-07-2026
+12,transportation,01-08-2026,feul
+11,transportation,01-09-2026,auto
+134,clothing,01-10-2026,levis
+446,clothing,01-11-2026,dlf
+10,clothing,01-12-2026,hnm
+10,clothing,01-12-2026,readymade
+,food,01-06-2026,paid to zomato
+100,food,01-05-2026,zomato order
+100,food,01-11-2026,rasila
+100,food,,swiggy
+
